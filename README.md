@@ -46,7 +46,7 @@ Once you have it working in the console, write an event listener that will use t
 
 **YOUR NOTES**
 ```
-
+Took me a while to figure out how to add the class name to header attribute. 
 ```
 
 ## Deliverable 2: Like Button
@@ -55,8 +55,7 @@ Once you have it working in the console, write an event listener that will use t
 
 **YOUR NOTES**
 ```
-
-```
+Being as the element in question to be incremented is a string, I was unsure how to move forward. I tried splitting and then parse Inting the first number of that that array to get the total number of links, increment it, and then put it back on the page, but I got a bit lost in the variables. 
 
 ## Deliverable 3: Add a New Animal Sighting Post
 
@@ -81,6 +80,6 @@ Some things to keep in mind:
 
 **YOUR NOTES**
 ```
-
+Couldn't get it to work :( I'm a bit confused how the input data gets turned into an actual html element. The renderOneSpecies function?
 ```
 

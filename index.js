@@ -1,27 +1,31 @@
 /***** Deliverable 1 *****/
-const header = document.querySelector("#header")
-console.log("Here's your header:", header)
+
+
+
+
 
 
 /***** Deliverable 2 *****/
-header.style.color = "green"
+
+
+
 
 
 /***** Deliverable 3 *****/
 console.log('This is what the traveler object looks like: ', traveler)
 
-const profileImg = document.querySelector("#profile img")
-profileImg.src = traveler.photo
-profileImg.alt = traveler.name
+// const profileImg = document.querySelector("#profile img")
+// profileImg.src = traveler.photo
+// profileImg.alt = traveler.name
 
-const profileH2 = document.querySelector("#profile h2")
-profileH2.textContent = traveler.name
+// const profileH2 = document.querySelector("#profile h2")
+// profileH2.textContent = traveler.name
 
-const profileEm = document.querySelector("#profile em")
-profileEm.textContent = traveler.nickname
+// const profileEm = document.querySelector("#profile em")
+// profileEm.textContent = traveler.nickname
 
-const likes = document.querySelector("#profile .likes")
-likes.textContent = `${traveler.likes} Likes`
+// const likes = document.querySelector("#profile .likes")
+// likes.textContent = `${traveler.likes} Likes`
 
 
 /***** Deliverable 4 *****/
@@ -59,14 +63,54 @@ animalToRemove.remove()
 /************************** EVENTS JS MINI CHALLENGE ******************************/
 
 /***** Deliverable 1 *****/
-function toggleColor(element) {
-    if (element.style.color === "green") {
-        element.style.color = "black"
-    } else {
-        element.style.color = "green"
-    }
+
+
+const header = document.querySelector("#header")
+header.classList.add('pinkd')
+
+console.log("Here's your header:", header)
+
+header.addEventListener('click', function () {
+    if (header.matches('.hotpink')) 
+    {
+        toggleColor(document.querySelector("h1#header"))
+        header.classList.remove ('pinkd')
 }
+else {
+    toggleColor(document.querySelector("h1#header"))
+    header.classList.add ('pinkd')
+}
+
+})
 
 /***** Deliverable 2 *****/
 
+let likeButton = document.querySelector('.like-button')
+likeButton.addEventListener ('click', function ({
+const likes = document.querySelector('.likes');
+const likesArray = likes.textContent.split(' ');
+const likesInt = parseInt(likes[0]);
+likesInt ++;
+document.querySelector('.likes').textContent = `${likesInt} likes`
+}
 /***** Deliverable 3 *****/
+const sForm = document.querySelector('#new-animal-sighting-form')
+
+sForm.addEventListener('submit', function(e) { 
+    e.preventDefault
+
+    const speciesI = e.target.species.value
+    const speciesLinkI = e.target.link.value
+    const speciesPhotoI = e.target.link.value
+    const speciesDescriptionI = e.target.description.value
+
+    const newSpecies = {
+        species: speciesI,
+        link: speciesLinkI,
+        photo: speciesPhotoI,
+        description: speciesDescriptionI
+
+    }
+    renderOneSpecies(newSpecies)
+    e.target.reset
+})
